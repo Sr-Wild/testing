@@ -83,8 +83,10 @@ function validations(d) {
             d.querySelectorAll('.grup-right').forEach((icon)=>{
                 icon.classList.remove('grup-right');
             });
+            d.getElementById("submit").disabled = false;
         } else {
             d.getElementById('from-message').classList.add('from-message-act');
+            d.getElementById("submit").disabled = true;
         }
     })
     //para que el usuario no la cage por gafo
