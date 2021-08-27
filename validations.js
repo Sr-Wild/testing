@@ -73,6 +73,14 @@ function validations(d) {
     form.addEventListener('submit',(e)=>{
         e.preventDefault();
         if (camps.name && camps.lastname && camps.id && camps.email && camps.tlf && camps.dire) {
+                let name = d.querySelector('#name').value ;
+                let lastname = d.querySelector('#lastname').value;
+                let id = d.querySelector('#id').value;
+                let email = d.querySelector('#email').value;
+                let tlf = d.querySelector('#tlf').value;
+                let dire = d.querySelector('#dire').value;
+                let url = "https://wa.me/584245611215?text=*From*%0A%0A*Name*%0A"+name+"%0A*Lastname*%0A"+lastname+"%0A*ID*%0A"+id+"%0A*Email*%0A"+email+"%0A*Phone Number*%0A"+ tlf +"%0A*Diretion*%0A"+ dire;
+                window.open(url);
             form.reset();
             d.getElementById('messg-exi').classList.add('messg-exi-act');
             setTimeout(()=>{
@@ -81,17 +89,6 @@ function validations(d) {
             
             d.querySelectorAll('.grup-right').forEach((icon)=>{
                 icon.classList.remove('grup-right');
-            });
-            d.querySelector('#submit').addEventListener('click', function () {
-                let name = d.querySelector('#name').value ;
-                let lastname = d.querySelector('#lastname').value;
-                let id = d.querySelector('#id').value;
-                let email = d.querySelector('#email').value;
-                let tlf = d.querySelector('#tlf').value;
-                let dire = d.querySelector('#dire').value;
-            
-                let url = "https://wa.me/584245611215?text=*From*%0A%0A*Name*%0A"+name+"%0A*Lastname*%0A"+lastname+"%0A*ID*%0A"+id+"%0A*Email*%0A"+email+"%0A*Phone Number*%0A"+ tlf +"%0A*Diretion*%0A"+ dire;
-                window.open(url);
             });
         } else {
             d.getElementById('from-message').classList.add('from-message-act');}
