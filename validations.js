@@ -55,8 +55,6 @@ function validations(d) {
             d.querySelector(`#grup-${camp} .error`).classList.remove('error-act');
             d.querySelector(`#grup-${camp} .vald-est`).classList.remove('fa-times-circle');
             d.querySelector(`#grup-${camp} .vald-est`).classList.add('fa-check-circle');
-            from.getElementById('submit').disabled=false;
-            
             camps[camp]=true;
         } else {
             d.getElementById(`grup-${camp}`).classList.add('grup-wrong');
@@ -64,8 +62,7 @@ function validations(d) {
             d.querySelector(`#grup-${camp} .error`).classList.add('error-act');
             d.querySelector(`#grup-${camp} .vald-est`).classList.add('fa-times-circle');
             d.querySelector(`#grup-${camp} .vald-est`).classList.remove('fa-check-circle');
-            camps[camp]=false;
-            from.getElementById('submit').disabled=true;
+            camps[camp]=false
         }
     }
 
