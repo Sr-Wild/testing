@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="head"><h1>From</h1></div>
+        <form action="" class="formulario" id="formulario">
+            <!--grup: name-->
+            <div class="from-grup" id="grup-name">
+                <label for="name" class="form-label">Name</label>
+                <div class="grup-input">
+                    <input type="text" name="name" id="name" class="form-input" placeholder="insert you name" required>
+                    <i class="vald-est fas fa-times-circle"></i>
+                </div>
+                <p class="error">The name has to be 4 to 16 digits long and can only contain letters.</p>
+            </div>
+            <!--grup: lastname-->
+            <div class="from-grup" id="grup-lastname">
+                <label for="lastname" class="form-label"> Last Name</label>
+                <div class="grup-input">
+                    <input type="text" name="lastname" id="lastname" class="form-input" placeholder="insert you last name" required>
+                    <i class="vald-est fas fa-times-circle"></i>
+                </div>
+                <p class="error">The Last name has to be 4 to 16 digits long and can only contain letters.</p>
+            </div>
+            <!--grup: id-->
+            <div class="from-grup" id="grup-id">
+                <label for="id" class="form-label">Identification Card</label>
+                <div class="grup-input">
+                    <input type="text" name="id" id="id" class="form-input" placeholder="insert you ID" required>
+                    <i class="vald-est fas fa-times-circle"></i>
+                </div>
+                <p class="error">the ID must have 3 to 9 digits and can only be numbers.</p>
+            </div>
+            <!--grup: email-->
+            <div class="from-grup" id="grup-email">
+                <label for="email" class="form-label">Email</label>
+                <div class="grup-input">
+                    <input type="email" name="email" id="email" class="form-input" placeholder="insert you email" required>
+                    <i class="vald-est fas fa-times-circle"></i>
+                </div>
+                <p class="error">The email can only contain letters, numbers, periods, hyphens and underscore.</p>
+            </div>
+            <!--grup: tlf-->
+            <div class="from-grup" id="grup-tlf">
+                <label for="tlf" class="form-label">Phone Number</label>
+                <div class="grup-input">
+                    <input type="text" name="tlf" id="tlf" class="form-input" placeholder="insert you phone number" required>
+                    <i class="vald-est fas fa-times-circle"></i>
+                </div>
+                <p class="error">The phone can only contain numbers and the maximum is 14 digits</p>
+            </div>
+            <!--grup:dire-->
+            <div class="from-grup" id="grup-dire">
+                <label for="dire" class="form-label">Direction</label>
+                <div class="grup-input">
+                    <input type="text" name="dire" id="dire" class="form-input" placeholder="insert you direction" required>
+                    <i class="vald-est fas fa-times-circle"></i>
+                </div>
+                <p class="error">the direction must be 16 digits and can only contain numbers, letters and underscore.</p>
+            </div>
+
+            <div class="from-message" id="from-message">
+                <p><i class="fas fa-exclamation-triangle"></i><b>ERROR:</b>Please fill in the form correctly.</p>
+            </div>
+
+            <div class="from-btn btn-send">
+                <button type="submit" class="btn" id="submit">Send <i class="fas fa-paper-plane"></i> </button>
+                <p class="messg-exi" id="messg-exi">Form sent successfully!</p>
+            </div>
+
+        </form>
+
+    </main>
+    <script src="validations.js"></script>
+</body>
+</html>
