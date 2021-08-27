@@ -90,6 +90,7 @@ function validations(d) {
             d.querySelectorAll('.grup-right').forEach((icon)=>{
                 icon.classList.remove('grup-right');
             });
+            d.getElementById('from-message').classList.remove('from-message-act');
         } else {
             d.getElementById('from-message').classList.add('from-message-act');}
     })
