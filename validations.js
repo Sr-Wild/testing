@@ -55,6 +55,7 @@ function validations(d) {
             d.querySelector(`#grup-${camp} .error`).classList.remove('error-act');
             d.querySelector(`#grup-${camp} .vald-est`).classList.remove('fa-times-circle');
             d.querySelector(`#grup-${camp} .vald-est`).classList.add('fa-check-circle');
+            from.getElementById('submit').disabled=false;
             
             camps[camp]=true;
         } else {
@@ -64,6 +65,7 @@ function validations(d) {
             d.querySelector(`#grup-${camp} .vald-est`).classList.add('fa-times-circle');
             d.querySelector(`#grup-${camp} .vald-est`).classList.remove('fa-check-circle');
             camps[camp]=false;
+            from.getElementById('submit').disabled=true;
         }
     }
 
@@ -83,11 +85,8 @@ function validations(d) {
             d.querySelectorAll('.grup-right').forEach((icon)=>{
                 icon.classList.remove('grup-right');
             });
-            d.getElementById("submit").disabled = false;
         } else {
             d.getElementById('from-message').classList.add('from-message-act');
-            d.getElementById("submit").disabled = true;
-        }
     })
     //para que el usuario no la cage por gafo
 }
