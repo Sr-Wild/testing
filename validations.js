@@ -9,7 +9,7 @@ function validations(d) {
         id:/^\d{3,9}$/,
         email:/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         tlf:/^\d{7,14}$/,
-        dire:/^[a-zA-Z0-9\-]{4,30}$/
+        dire:/^[a-zA-Z0-9\-\s]{4,30}$/
     }
     const camps ={
         name:false,
