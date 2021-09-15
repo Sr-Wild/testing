@@ -55,6 +55,7 @@ function validations(d) {
             d.querySelector(`#grup-${camp} .error`).classList.remove('error-act');
             d.querySelector(`#grup-${camp} .vald-est`).classList.remove('fa-times-circle');
             d.querySelector(`#grup-${camp} .vald-est`).classList.add('fa-check-circle');
+            //tamples string
             camps[camp]=true;
         } else {
             d.getElementById(`grup-${camp}`).classList.add('grup-wrong');
