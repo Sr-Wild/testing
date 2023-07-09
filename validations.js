@@ -9,7 +9,7 @@ function validations(d) {
         id:/^\d{3,9}$/,
         email:/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         tlf:/^\d{7,14}$/,
-        dire:/^[a-zA-Z0-9\-]{4,16}$/
+        dire:/^[a-zA-Z0-9\-\s]{4,40}$/
     }
     const camps ={
         name:false,
@@ -55,6 +55,7 @@ function validations(d) {
             d.querySelector(`#grup-${camp} .error`).classList.remove('error-act');
             d.querySelector(`#grup-${camp} .vald-est`).classList.remove('fa-times-circle');
             d.querySelector(`#grup-${camp} .vald-est`).classList.add('fa-check-circle');
+            //tamples string
             camps[camp]=true;
         } else {
             d.getElementById(`grup-${camp}`).classList.add('grup-wrong');
